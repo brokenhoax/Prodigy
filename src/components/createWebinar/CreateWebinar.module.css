@@ -1,0 +1,237 @@
+.createContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: #e4e1ec;
+  color: #005082;
+  font-weight: bold;
+  height: 100%;
+  margin-left: 25%;
+  margin-right: 25%;
+  font-size: 0.9rem;
+}
+
+/* // TEXT BOXES // */
+
+.textBox {
+  display: flex;
+  width: 100%;
+  border-radius: 2px;
+  margin-bottom: 0.5rem;
+  border: none;
+}
+
+.textBoxes {
+  margin: 1rem;
+}
+
+.label {
+  display: flex;
+  color: #005082;
+  font-weight: normal;
+  font-style: italic;
+}
+
+.test {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  font-size: 3rem;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+/* // Asterisks for Field Headers // */
+
+label {
+  color: #411e8f;
+}
+
+label.important:after {
+  content: " *";
+  color: #005082;
+  font-weight: bold;
+}
+
+/* // Individual Fields / Consider Refactoring// */
+
+.title {
+  margin-bottom: 0.5rem;
+}
+
+.description {
+  margin-bottom: 0.5rem;
+}
+
+.eventTitle {
+  margin-bottom: 0.5rem;
+}
+
+.eventStart {
+  margin-bottom: 0.5rem;
+}
+
+.eventEnd {
+  margin-bottom: 0.5rem;
+}
+
+.videoURL {
+  margin-bottom: 0.5rem;
+}
+
+.videoTitle {
+  margin-bottom: 0.5rem;
+}
+
+.videoDescription {
+  margin-bottom: 0.5rem;
+}
+
+.mainTopic {
+  margin-bottom: 0.5rem;
+}
+
+.skillLevel {
+  margin-bottom: 0.5rem;
+}
+
+.day {
+  margin-bottom: 0.5rem;
+}
+
+.timeZone {
+  padding-bottom: 0.5rem;
+}
+
+.duration {
+  padding-bottom: 0.5rem;
+}
+/* // DROP DOWNS // */
+
+.dropDown {
+  border: none;
+  background-color: white;
+  width: 100%;
+}
+
+/* // CHECK BOXES// */
+
+.checkBox {
+  display: flex;
+  width: 100%;
+  position: relative;
+  padding-left: 2rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-weight: normal;
+  margin-left: 1rem;
+}
+
+/* Hide the browser's default checkbox */
+.checkBox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.checkBox:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.checkBox input:checked ~ .checkmark {
+  background-color: #005082;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.checkBox input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.checkBox .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+/* // SUBMIT BUTTON // */
+
+.buddy {
+  text-align: center;
+  justify-content: center;
+}
+
+.myBud {
+  border: none;
+  margin: 0.5rem;
+  border-radius: 0.3rem;
+  font-size: 1rem;
+  background-color: #005082;
+  color: white;
+  margin-top: 4rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+}
+
+.tagHeader {
+  display: flex;
+  align-items: space-between;
+  color: #411e8f;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.tagContainer {
+  display: flex;
+  flex-direction: row;
+}
+
+@media only screen and (max-width: 1100px) {
+  .createContainer {
+    margin: 0;
+  }
+
+  .tagContainer {
+    display: flex;
+    flex-direction: column;
+  }
+}

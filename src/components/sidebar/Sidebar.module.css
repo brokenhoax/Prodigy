@@ -1,0 +1,33 @@
+/* ========= GRID ========== */
+
+.sideContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #e4e1ec;
+  color: #293241;
+  padding: 1rem;
+}
+
+/* ========= CHARTS ========== */
+
+.chart {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.chartHeader {
+  font-weight: bold;
+  font-size: 1rem;
+  text-align: center;
+  padding-bottom: 1rem;
+}
+
+.hours {
+  font-size: 4rem;
+}
+
+.webinars {
+  font-size: 4rem;
+}

@@ -1,0 +1,66 @@
+/* // USER PRE-LOG-IN SCREEN // */
+
+.profileWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #e4e1ec;
+  color: #005082;
+  height: 100%;
+  min-width: 26em;
+}
+
+.profileHeader {
+  margin-bottom: 4rem;
+  font-weight: bold;
+}
+
+.profileSection {
+  width: 30%;
+}
+
+.profileKey {
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+  margin-bottom: 2rem;
+  width: 100%;
+}
+
+.profileValue {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  width: 100%;
+}
+
+.inputField {
+  border-style: none;
+  min-width: 20rem;
+}
+
+.profileButton {
+  display: flex;
+  justify-content: center;
+}
+
+.myBud {
+  display: block;
+  border: none;
+  border-radius: 0.3rem;
+  font-size: 1rem;
+  background-color: #005082;
+  color: white;
+  margin-top: 4rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+}
+
+@media only screen and (max-width: 700px) {
+  .profileWrapper {
+    margin: 0;
+  }
+}

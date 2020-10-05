@@ -1,0 +1,94 @@
+/* ========= GRID ========== */
+
+.chartContainer {
+  display: grid;
+  grid-area: main;
+  position: relative;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    "totalWeb     totalHours    timeline"
+    "genre        presenter     skill";
+  margin: 1rem;
+  grid-gap: 1rem;
+}
+
+/* ========= CHARTS ========== */
+
+.chart {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 2fr 8fr;
+  grid-template-areas:
+    "chartHeader"
+    "graph";
+  position: relative;
+  background-color: #16213e;
+  justify-items: center;
+}
+
+.chartHeader {
+  margin-top: 2rem;
+}
+
+.hours {
+  grid-area: totalHours;
+  font-size: 12rem;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.webinars {
+  grid-area: totalWeb;
+  font-size: 12rem;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.timeline {
+  grid-area: presenter;
+  position: absolute;
+  width: 90%;
+  height: 30%;
+  top: 33%;
+}
+
+.genre {
+  grid-area: genre;
+  position: absolute;
+  width: 90%;
+  height: 60%;
+  top: 30%;
+}
+
+.skill {
+  grid-area: skill;
+  position: absolute;
+  width: 90%;
+  height: 60%;
+  top: 33%;
+}
+
+.presenter {
+  grid-area: presenter;
+  display: block;
+  position: absolute;
+  width: 90%;
+  height: 30%;
+  top: 33%;
+}
+
+.main {
+  grid-area: main;
+  background-color: #f2f4f8;
+}

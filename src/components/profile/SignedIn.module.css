@@ -1,0 +1,70 @@
+/* // USER POST-LOG-IN SCREEN // */
+
+.profileContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #e4e1ec;
+  color: #005082;
+  height: 100%;
+  min-width: 40rem;
+}
+
+.profileWrapper {
+  width: 40%;
+}
+
+.profileHeader {
+
+  text-align: center;
+  font-weight: bold;
+}
+
+.loggedKey {
+  margin: 1rem;
+}
+
+.loggedValue {
+  margin: 1rem;
+}
+
+.inputField {
+  width: 100%;
+}
+
+.userImage {
+  display: flex;
+  justify-content: center;
+  margin: 3rem;
+}
+
+.userPic {
+  width: 15rem;
+}
+
+.myBuds {
+  display: flex;
+  justify-content: center;
+}
+
+.myBud {
+  display: block;
+  border: none;
+  margin: 0.5rem;
+  border-radius: 0.3rem;
+  font-size: 1rem;
+  background-color: #005082;
+  color: white;
+  margin-top: 4rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+}
+
+@media only screen and (max-width: 1350x) {
+  .profileContainer {
+    margin: 0;
+  }
+}

@@ -1,0 +1,40 @@
+.navi {
+  display: grid;
+  grid-area: navi;
+  height: 100%;
+  background: linear-gradient(to bottom, #005082 10%, #411e8f 50%);
+}
+
+.navWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-items: end;
+  height: 90vh;
+  width: 100%;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 80px;
+}
+
+.navLink {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  transition: all 0.5s;
+  cursor: pointer;
+  height: 100%;
+}
+
+.navLink span {
+  cursor: pointer;
+  position: relative;
+  transition: 0.25s;
+}
+
+.navLink:hover {
+  color: #ffbd69;
+}
+.navLink:hover span {
+  padding-left: 1rem;
+}

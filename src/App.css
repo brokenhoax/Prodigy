@@ -1,0 +1,19 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: 80px 1fr auto;
+  grid-template-rows: 80px auto;
+  grid-template-areas:
+    "logo   topbar  topbar"
+    "navi   main    sidebar";
+  min-height: 100vh;
+  margin: 0;
+  background-color: #000839;
+  color: white;
+}
+
+.main {
+  display: grid;
+  grid-area: main;
+  height: 100%;
+
+}

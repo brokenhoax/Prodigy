@@ -1,0 +1,17 @@
+.webinars {
+  font-size: 8rem;
+  overflow: auto;
+  color: white;
+}
+
+.hours {
+  font-size: 8rem;
+  overflow: auto;
+  color: white;
+}
+
+.webinars__title {
+  width: 100%;
+  font-size: 4rem;
+  text-align: center;
+}

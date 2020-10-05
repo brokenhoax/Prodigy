@@ -1,0 +1,20 @@
+@font-face {
+  font-family: "permanent";
+  src: url(./fonts/permanent.ttf);
+  font: white;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0;
+  font-size: 1.8rem;
+  font-family: "permanent";
+  font: white;
+}
+
+a:link {
+  text-decoration: none;
+}
