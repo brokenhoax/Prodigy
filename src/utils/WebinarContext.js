@@ -49,7 +49,7 @@ export const WebinarProvider = ({ children }) => {
 
   useEffect((webinars) => {
     axios
-      .get("https://salty-fortress-9010-virt-b.herokuapp.com/webinar/get/all")
+      .get("https://frozen-woodland-47284.herokuapp.com/webinar/get/all")
       .then((res) => {
         const results = res.data.data;
         // console.log(`Results of Axios Call: ${JSON.stringify(results)}`);

@@ -34,7 +34,7 @@ class CreateWebinar extends Component {
   postNewWebinar = async (data) => {
     try {
       const res = await axios.post(
-        "https://salty-fortress-9010-virt-b.herokuapp.com/webinar/create",
+        "https://frozen-woodland-47284.herokuapp.com/webinar/create",
         data,
         {
           headers: {
