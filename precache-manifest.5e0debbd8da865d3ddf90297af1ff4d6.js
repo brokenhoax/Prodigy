@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "2b9d799f151b8acfc320370a098e96b0",
+    "revision": "52266fd4f67e2ce30c5c664b93009e77",
     "url": "/Prodigy-Frontend/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Prodigy-Frontend/static/css/2.4fcd7487.chunk.css"
   },
   {
-    "revision": "11abd3344239159012f0",
-    "url": "/Prodigy-Frontend/static/css/main.a7b9efd7.chunk.css"
+    "revision": "920e12755beb21b22269",
+    "url": "/Prodigy-Frontend/static/css/main.5ab12adf.chunk.css"
   },
   {
     "revision": "1c931a90450ba519fa7b",
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Prodigy-Frontend/static/js/2.9dfdda52.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "11abd3344239159012f0",
-    "url": "/Prodigy-Frontend/static/js/main.7113593e.chunk.js"
+    "revision": "920e12755beb21b22269",
+    "url": "/Prodigy-Frontend/static/js/main.94c13dfe.chunk.js"
   },
   {
     "revision": "d2a64cb7048a956bf1ff",
