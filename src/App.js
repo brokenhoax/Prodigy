@@ -77,12 +77,6 @@ export default function App() {
                 component={Webinars}
               />
               <Route
-                path="/auth"
-                className="main"
-                exact={true}
-                component={AuthOptions}
-              />
-              <Route
                 path="/register"
                 className="main"
                 exact={true}

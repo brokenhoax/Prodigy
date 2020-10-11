@@ -11,23 +11,17 @@
   z-index: 3;
   margin-left: 25%;
   margin-right: 25%;
+  height: 2.3rem;
 }
 
 .searchBar {
   display: flex;
   position: relative;
-  grid-area: search;
-  justify-content: flex-end;
-  min-width: 2rem;
-  border: 2px var(--clr-bg);
-  z-index: 10;
-  text-decoration: none;
+  justify-content: end;
+  height: 100%;
 }
 
 .searchBarInput {
-  display: flex;
-  position: relative;
-  flex-grow: 1;
   font-size: 1.5rem;
   padding: 0 0.5rem;
   border-style: none;
@@ -37,6 +31,7 @@
 
 .searchBarSubmit {
   position: absolute;
+  justify-items: end;
   cursor: pointer;
   background: #a664e3;
   height: 2.3rem;
