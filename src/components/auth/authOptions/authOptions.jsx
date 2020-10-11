@@ -7,7 +7,7 @@ const AuthOptions = () => {
   const history = useHistory();
 
   const register = () => history.push("/register");
-  const login = () => history.push("/profile");
+  const login = () => history.push("/login");
   const logout = () => {
     setUserData({
       token: undefined,

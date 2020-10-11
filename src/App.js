@@ -15,7 +15,7 @@ import Stats from "./components/stats/Stats";
 import Schedule from "./components/schedule/Schedule";
 import Favorites from "./components/favorites/Favorites";
 import Webinars from "./components/webinars/Webinars";
-import Profile from "./components/auth/profile/Profile";
+import LogIn from "./components/auth/login/Login";
 import PageNotFound from "./components/error/Error";
 import { WebinarProvider } from "../src/utils/WebinarContext";
 import UserContext from "../src/utils/UserContext";
@@ -60,15 +60,40 @@ export default function App() {
       <div className="grid-container">
         <UserContext.Provider value={{ userData, setUserData }}>
           <WebinarProvider>
-            <Logo />
-            <Topbar />
-            <Navbar />
+            <Logo className="logo" />
+            <Topbar className="topbar" />
+            <Navbar className="navbar" />
             <Switch>
-              <Route path="/" exact={true} component={Webinars} />
-              <Route path="/home" exact={true} component={Webinars} />
-              <Route path="/auth" exact={true} component={AuthOptions} />
-              <Route path="/register" exact={true} component={Register} />
-              <Route path="/profile" exact={true} component={Profile} />
+              <Route
+                path="/"
+                className="main"
+                exact={true}
+                component={Webinars}
+              />
+              <Route
+                path="/home"
+                className="main"
+                exact={true}
+                component={Webinars}
+              />
+              <Route
+                path="/auth"
+                className="main"
+                exact={true}
+                component={AuthOptions}
+              />
+              <Route
+                path="/register"
+                className="main"
+                exact={true}
+                component={Register}
+              />
+              <Route
+                path="/login"
+                className="main"
+                exact={true}
+                component={LogIn}
+              />
               <Route
                 path="/webinars"
                 exact={true}
@@ -81,9 +106,24 @@ export default function App() {
                 component={Favorites}
                 className="webinars"
               />
-              <Route exact path="/create" component={CreateWebinar} />
-              <Route path="/stats" exact={true} component={Stats} />
-              <Route path="/schedule" exact={true} component={Schedule} />
+              <Route
+                exact
+                path="/create"
+                className="main"
+                component={CreateWebinar}
+              />
+              <Route
+                path="/stats"
+                className="main"
+                exact={true}
+                component={Stats}
+              />
+              <Route
+                path="/schedule"
+                className="main"
+                exact={true}
+                component={Schedule}
+              />
               <Route path="/404" component={PageNotFound} />
               <Redirect from="*" to="/404" />
             </Switch>

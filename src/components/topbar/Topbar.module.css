@@ -1,7 +1,44 @@
+a {
+  outline: none;
+}
+
 .topbar {
   grid-area: topbar;
   background-color: #005082;
   position: sticky;
   top: 0;
   z-index: 2;
+}
+
+.authOptions {
+  display: flex;
+  justify-content: end;
+  height: 100%;
+}
+
+.logOut {
+  padding: 10px;
+}
+
+.logIn {
+  padding: 10px;
+}
+
+.register {
+  padding: 10px;
+}
+
+.logOut:hover {
+  padding-top: 1rem;
+  background-color: #411e8f;
+}
+
+.logIn:hover {
+  padding-top: 1rem;
+  background-color: #411e8f;
+}
+
+.register:hover {
+  padding-top: 1rem;
+  background-color: #411e8f;
 }

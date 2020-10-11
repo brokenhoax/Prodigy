@@ -1,6 +1,7 @@
-.mainContainer {
-  color: #3e4754;
-  font-size: 1.3rem;
-  background-color: #e4e1ec;
-  padding: 2rem;
+.test {
+  background-color: #16213e;
+}
+
+.wrapper {
+  margin: 1rem;
 }

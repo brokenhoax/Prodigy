@@ -5,6 +5,7 @@ import Genre from "../charts/genre/Genre";
 import Skill from "../charts/skill/Skill";
 import Presenter from "../charts/presenter/Presenter";
 import styles from "./Sidebar.module.css";
+import "../../App.css";
 import axios from "axios";
 
 class Sidebar extends Component {
@@ -62,46 +63,48 @@ class Sidebar extends Component {
 
   render() {
     return (
-      <div className={styles.sideContainer}>
-        <CountWebinars
-          chart={styles.chart}
-          chartHeader={styles.chartHeader}
-          totalWeb={styles.totalWeb}
-          webinars={styles.webinars}
-          sumWebinars={this.state.sumWebinars}
-        />
-        <CountHours
-          chart={styles.chart}
-          chartHeader={styles.chartHeader}
-          totalHours={styles.totalHours}
-          hours={styles.hours}
-          sumHours={this.state.sumHours}
-        />
-        <Genre
-          chart={styles.chart}
-          chartHeader={styles.chartHeader}
-          genre={styles.genre}
-          display={this.state.display}
-          position={this.state.position}
-          borderWidth={this.state.borderWidth}
-          aspectRatio={this.state.aspectRatio}
-        />
-        <Skill
-          chart={styles.chart}
-          chartHeader={styles.chartHeader}
-          skill={styles.skill}
-          borderWidth={this.state.borderWidth}
-          aspectRatio={this.state.aspectRatio}
-        />
-        <Presenter
-          chart={styles.chart}
-          chartHeader={styles.chartHeader}
-          presenter={styles.presenter}
-          display={this.state.display}
-          position={this.state.position}
-          borderWidth={this.state.borderWidth}
-          aspectRatio={this.state.aspectRatio}
-        />
+      <div className="sidebar">
+        <div className={styles.sideContainer}>
+          <CountWebinars
+            chart={styles.chart}
+            chartHeader={styles.chartHeader}
+            totalWeb={styles.totalWeb}
+            webinars={styles.webinars}
+            sumWebinars={this.state.sumWebinars}
+          />
+          <CountHours
+            chart={styles.chart}
+            chartHeader={styles.chartHeader}
+            totalHours={styles.totalHours}
+            hours={styles.hours}
+            sumHours={this.state.sumHours}
+          />
+          <Genre
+            chart={styles.chart}
+            chartHeader={styles.chartHeader}
+            genre={styles.genre}
+            display={this.state.display}
+            position={this.state.position}
+            borderWidth={this.state.borderWidth}
+            aspectRatio={this.state.aspectRatio}
+          />
+          <Skill
+            chart={styles.chart}
+            chartHeader={styles.chartHeader}
+            skill={styles.skill}
+            borderWidth={this.state.borderWidth}
+            aspectRatio={this.state.aspectRatio}
+          />
+          <Presenter
+            chart={styles.chart}
+            chartHeader={styles.chartHeader}
+            presenter={styles.presenter}
+            display={this.state.display}
+            position={this.state.position}
+            borderWidth={this.state.borderWidth}
+            aspectRatio={this.state.aspectRatio}
+          />
+        </div>
       </div>
     );
   }

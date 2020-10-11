@@ -14,7 +14,7 @@ class Navbar extends Component {
     return (
       <section className={styles.navi}>
         <div className={styles.navWrapper}>
-          <Link className={styles.navLink} to="/profile">
+          <Link className={styles.navLink} to="/login">
             <span>
               <FontAwesomeIcon
                 className={styles.navIcon}

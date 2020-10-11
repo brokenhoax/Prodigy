@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Cards from "../cards/Cards";
-import styles from "./Favorites.module.css";
-import searchStyle from "../search/Search.module.css";
+
 import Search from "../search/Search";
 
 import { BrowserRouter as Router } from "react-router-dom";
@@ -15,16 +14,10 @@ function Favorites() {
   };
   return (
     <Router>
-      <Cards
-        className={styles.webinars}
-        search={searchTerm}
-        header={"Favorites"}
-      />
-      <Search
-        className={searchStyle.test}
-        onChange={handleChange}
-        value={searchTerm}
-      />
+      <div className="main">
+        <Search onChange={handleChange} value={searchTerm} />
+        <Cards search={searchTerm} header={"Favorites"} />
+      </div>
     </Router>
   );
 }

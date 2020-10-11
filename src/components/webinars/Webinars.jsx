@@ -4,6 +4,7 @@ import styles from "./Webinars.module.css";
 import searchStyle from "../search/Search.module.css";
 import Search from "../search/Search";
 import { BrowserRouter as Router } from "react-router-dom";
+import "../../App.css";
 
 const Webinars = () => {
   // Search Bar
@@ -15,16 +16,14 @@ const Webinars = () => {
 
   return (
     <Router>
-      <Cards
-        className={styles.webinars}
-        search={searchTerm}
-        header={"Upcoming Webinars"}
-      />
-      <Search
-        className={searchStyle.test}
-        onChange={handleChange}
-        value={searchTerm}
-      />
+      <div className="main">
+        <Search onChange={handleChange} value={searchTerm} />
+        <Cards
+          className={styles.webinars}
+          search={searchTerm}
+          header={"Upcoming Webinars"}
+        />
+      </div>
     </Router>
   );
 };
