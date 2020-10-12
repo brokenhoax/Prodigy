@@ -37,14 +37,17 @@ export default function App() {
         token = "";
       }
       const tokenResponse = await axios.post(
-        "http://localhost:3000/user/isTokenValid",
+        "https://frozen-woodland-47284.herokuapp.com/user/isTokenValid",
         null,
         { headers: { "x-auth-token": token } }
       );
       if (tokenResponse.data) {
-        const userRes = await axios.get("http://localhost:3000/users/", {
-          headers: { "x-auth-token": token },
-        });
+        const userRes = await axios.get(
+          "https://frozen-woodland-47284.herokuapp.com/users/",
+          {
+            headers: { "x-auth-token": token },
+          }
+        );
         setUserData({
           token,
           user: userRes.data,

@@ -29,11 +29,17 @@ const Register = () => {
       displayname,
     };
     console.log(newUser);
-    await axios.post("http://localhost:3000/register", newUser);
-    const loginRes = await axios.post("http://localhost:3000/user/login", {
-      email,
-      password,
-    });
+    await axios.post(
+      "https://frozen-woodland-47284.herokuapp.com/register",
+      newUser
+    );
+    const loginRes = await axios.post(
+      "https://frozen-woodland-47284.herokuapp.com/user/login",
+      {
+        email,
+        password,
+      }
+    );
     setUserData({
       token: loginRes.data.token,
       user: loginRes.data.user,
