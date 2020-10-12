@@ -10,8 +10,9 @@ import Axios from "axios";
 const LogIn = () => {
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
+  const [displayname, setDisplayname] = useState();
 
-  const { setUserData } = useContext(UserContext);
+  const { userData, setUserData } = useContext(UserContext);
   const history = useHistory();
 
   const submit = async (e) => {
@@ -30,26 +31,34 @@ const LogIn = () => {
   };
 
   return (
-    <div className={styles.wrapper}>
+    <div>
       <div className="main">
-        <div className={styles.container}>
-          <h2 className={styles.logIn}>Log In</h2>
-          <form className={styles.form} onSubmit={submit}>
-            <label htmlFor="login-email">Email</label>
-            <input
-              id="login-email"
-              type="email"
-              onChange={(e) => setEmail(e.target.value)}
-            />
-            <label htmlFor="login-email">Password</label>
-            <input
-              id="login-password"
-              type="password"
-              onChange={(e) => setPassword(e.target.value)}
-            />
-            <input type="submit" value="Submit" />
-          </form>
-        </div>
+        {userData.token ? (
+          <div>Welcome, {userData.user.displayname}</div>
+        ) : (
+          <>
+            <div className={styles.wrapper}>
+              <div className={styles.container}>
+                <h2 className={styles.logIn}>Log In</h2>
+                <form className={styles.form} onSubmit={submit}>
+                  <label htmlFor="login-email">Email</label>
+                  <input
+                    id="login-email"
+                    type="email"
+                    onChange={(e) => setEmail(e.target.value)}
+                  />
+                  <label htmlFor="login-email">Password</label>
+                  <input
+                    id="login-password"
+                    type="password"
+                    onChange={(e) => setPassword(e.target.value)}
+                  />
+                  <input type="submit" value="Submit" />
+                </form>
+              </div>
+            </div>
+          </>
+        )}
       </div>
     </div>
   );

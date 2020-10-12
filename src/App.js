@@ -27,6 +27,7 @@ export default function App() {
   const [userData, setUserData] = useState({
     token: undefined,
     user: undefined,
+    favorite: undefined,
   });
 
   useEffect(() => {
@@ -52,6 +53,7 @@ export default function App() {
           token,
           user: userRes.data,
         });
+        console.log(userRes.data);
       }
     };
 
