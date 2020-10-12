@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Cards from "../cards/Cards";
-
 import Search from "../search/Search";
 
 import { BrowserRouter as Router } from "react-router-dom";

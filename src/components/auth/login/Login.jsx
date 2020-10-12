@@ -25,6 +25,7 @@ const LogIn = () => {
     setUserData({
       token: loginRes.data.token,
       user: loginRes.data.user,
+      favorite: loginRes.data.user.favorite,
     });
     localStorage.setItem("auth-token", loginRes.data.token);
     history.push("/");

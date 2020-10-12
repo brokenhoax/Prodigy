@@ -2,14 +2,15 @@
 import React from "react";
 import { useWebinar } from "../../utils/WebinarContext";
 // import { useUser } from "../../utils/UserContext";
+import UserContext from "../../utils/UserContext";
 import styles from "./Cards.module.css";
 import CardItem from "../cardItem/CardItem";
-import javascript from "../../images/javascript.png"
-import nodejs from "../../images/nodejs.png"
-import mongodb from "../../images/mongodb.png"
-import angular from "../../images/angular.jpg"
-import python from "../../images/python.jpg"
-import react from "../../images/react.jpg"
+import javascript from "../../images/javascript.png";
+import nodejs from "../../images/nodejs.png";
+import mongodb from "../../images/mongodb.png";
+import angular from "../../images/angular.jpg";
+import python from "../../images/python.jpg";
+import react from "../../images/react.jpg";
 
 import axios from "axios";
 
