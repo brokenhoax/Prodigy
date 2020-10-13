@@ -123,6 +123,8 @@ npm start
 npm start
 ```
 
+<br>
+
 <strong>Step 6</strong> - Navigate to your [Your Local Server](http://localhost:3000/Prodigy-Frontend#/) to test Virtuoso!
 
 <br>
