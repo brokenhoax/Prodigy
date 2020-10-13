@@ -1,6 +1,6 @@
 # Virtuoso
 
-![Project Image](./public/assets/images/Virtuoso_Webinars.png)
+![Project Image](./public/assets/images/Virtuoso_Demo.gif)
 
 <br>
 
@@ -17,7 +17,6 @@
 - [Description](#description)
 - [Technologies](#technologies)
 - [Get Started](#get-started)
-- [Database](#database)
 - [API](#api)
 - [References](#references)
 - [License](#License)
@@ -125,7 +124,53 @@ npm start
 
 <br>
 
-<strong>Step 6</strong> - Navigate to your [Your Local Server](http://localhost:3000/Prodigy-Frontend#/) to test Virtuoso!
+<strong>Step 6</strong> - Don't forget to update all API calls with Local Host endpoints.
+
+For example, within "Login.jsx" you would replace this endpoint: https://frozen-woodland-47284.herokuapp.com/user/login with the local hosted substitute: http://localhost:3000//user/login
+
+###
+
+```javascript
+// E.g., This...
+
+const submit = async (e) => {
+  e.preventDefault();
+  const loginUser = { email, password };
+  const loginRes = await Axios.post(
+    "https://frozen-woodland-47284.herokuapp.com/user/login",
+    loginUser
+  );
+  setUserData({
+    token: loginRes.data.token,
+    user: loginRes.data.user,
+    favorite: loginRes.data.user.favorite,
+  });
+  localStorage.setItem("auth-token", loginRes.data.token);
+  history.push("/");
+};
+
+// becomes...
+
+const submit = async (e) => {
+  e.preventDefault();
+  const loginUser = { email, password };
+  const loginRes = await Axios.post(
+    "http://localhost:3000/user/login",
+    loginUser
+  );
+  setUserData({
+    token: loginRes.data.token,
+    user: loginRes.data.user,
+    favorite: loginRes.data.user.favorite,
+  });
+  localStorage.setItem("auth-token", loginRes.data.token);
+  history.push("/");
+};
+```
+
+<br>
+
+<strong>Step 7</strong> - Navigate to your [Your Local Server](http://localhost:3000/Prodigy-Frontend#/) to test Virtuoso!
 
 <br>
 
@@ -133,23 +178,19 @@ npm start
 
 <br>
 
-## Database
+## API
 
 <br>
 
-### Webinar "Get All" Database:
+### Webinar "Get All" from Database:
 
 https://frozen-woodland-47284.herokuapp.com/webinar/get/all
 
 <br>
 
-### User "Get All" Database:
+### User "Get All" from Database:
 
 https://frozen-woodland-47284.herokuapp.com/user/get/all
-
-<br>
-
-## API
 
 <br>
 

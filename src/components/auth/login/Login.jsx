@@ -19,7 +19,7 @@ const LogIn = () => {
     e.preventDefault();
     const loginUser = { email, password };
     const loginRes = await Axios.post(
-      "https://frozen-woodland-47284.herokuapp.com/user/login",
+      "http://localhost:3000/user/login",
       loginUser
     );
     setUserData({
