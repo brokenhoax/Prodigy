@@ -160,6 +160,14 @@ body {
   color: #005082;
 }
 
+.loggedIn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 5rem;
+}
+
 /* media queries */
 
 @media screen and (max-width: 550px) {

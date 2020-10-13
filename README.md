@@ -17,9 +17,14 @@
 - [Description](#description)
 - [Technologies](#technologies)
 - [Get Started](#get-started)
+- [Database & API](#database-&-api)
 - [References](#references)
 - [License](#License)
 - [Author Info](#author-info)
+
+<br>
+
+[Back To Top](#Virtuoso)
 
 <br>
 
@@ -54,46 +59,68 @@ Virtuoso is simply the stage. It's our community that makes for a symphony. [Hea
 
 <br>
 
-### To test the app hosted on Heroku, use the below link and credentials:
+### Test Credentials:
 
-https://brokenhoax.github.io/Prodigy-Frontend/#/
+<br>
 
 ```
-// Test Credentials:
-
 U/N: test@gmail.com
 P/W: password
 ```
 
 <br>
 
+### To test the app hosted on Heroku:
+
+<br>
+
+https://brokenhoax.github.io/Prodigy-Frontend/#/
+
+<br>
+
 ### To run the app locally:
 
-Step 1 - Clone both front-end and back-end repos:
+<br>
+
+<strong>Step 1</strong> - Clone both front-end and back-end repos:
 
 - [Prodigy Frontend](https://github.com/brokenhoax/Prodigy-Frontend)
 
 - [Prodigy Backend](https://github.com/brokenhoax/Prodigy-Backend)
 
-Step 2 - Install Virtuoso's dependencies by running the following command in both your front-end and back-end root folders:
+<br>
+
+<strong>Step 2</strong> - Install Virtuoso's dependencies by running the following command within the root directory of your <strong>front-end</strong> clone:
 
 ```javascript
 npm install
 ```
 
-Step 3 - Run the following command within the root directory of your back-end clone:
+<br>
+
+<strong>Step 3</strong> - Install Virtuoso's dependencies by running the following command within the root directory of your <strong>back-end</strong> clone:
+
+```javascript
+npm install
+```
+
+<br>
+
+<strong>Step 4</strong> - Run the following command within the root directory of your <strong>back-end</strong> clone:
 
 ```javascript
 npm start
 ```
 
-Step 4 - Next, once the backend server is running, run the following command within the root directory of your back-end clone:
+<br>
+
+<strong>Step 5</strong> - Next, once the backend server is running, run the following command within the root directory of your <strong>front-end</strong> clone:
 
 ```javascript
 npm start
 ```
 
-Step 5 - Navigate to your [Your Local Server](http://localhost:3000/Prodigy-Frontend#/) to test Virtuoso!
+<strong>Step 6</strong> - Navigate to your [Your Local Server](http://localhost:3000/Prodigy-Frontend#/) to test Virtuoso!
 
 <br>
 
@@ -101,7 +128,7 @@ Step 5 - Navigate to your [Your Local Server](http://localhost:3000/Prodigy-Fron
 
 <br>
 
-## Working With Our Databases:
+## Database & API:
 
 <br>
 
@@ -109,9 +136,13 @@ Step 5 - Navigate to your [Your Local Server](http://localhost:3000/Prodigy-Fron
 
 https://frozen-woodland-47284.herokuapp.com/webinar/get/all
 
+<br>
+
 ### User "Get All" Database:
 
 https://frozen-woodland-47284.herokuapp.com/user/get/all
+
+<br>
 
 ### Example API Query with Axios:
 
@@ -129,6 +160,8 @@ const getAllWebinars = () => {
 };
 ```
 
+<br>
+
 ### Webinar Public Database Endpoints:
 
 ```
@@ -137,6 +170,8 @@ get("/webinar/get/id/:id")
 get("/webinar/get/all")
 get("/webinar/get/createdby/:id")
 ```
+
+<br>
 
 ### User Public Database Endpoints:
 
@@ -172,7 +207,7 @@ get("/user/:id/webinar/passed")
 
 [CSS Modules with CSS-Tricks](https://css-tricks.com/css-modules-part-3-react/)
 
-[Schdule by Full Calendar](https://fullcalendar.io/)
+[Schedule by Full Calendar](https://fullcalendar.io/)
 
 [Charts with Chart.js](https://www.chartjs.org/)
 

@@ -35,7 +35,9 @@ const LogIn = () => {
     <div>
       <div className="main">
         {userData.token ? (
-          <div>Welcome, {userData.user.displayname}</div>
+          <div className={styles.loggedIn}>
+            Welcome, {userData.user.displayname}
+          </div>
         ) : (
           <>
             <div className={styles.wrapper}>
