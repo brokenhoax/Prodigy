@@ -9,7 +9,10 @@
 ---
 
 <br>
+
 ## Table of Contents
+
+<br>
 
 - [Description](#description)
 - [Technologies](#technologies)
@@ -17,6 +20,8 @@
 - [References](#references)
 - [License](#License)
 - [Author Info](#author-info)
+
+<br>
 
 ## Description
 
@@ -100,27 +105,31 @@ Step 5 - Navigate to your [Your Local Server](http://localhost:3000/Prodigy-Fron
 
 <br>
 
-Webinar "Get All" Database = https://frozen-woodland-47284.herokuapp.com/webinar/get/all
+### Webinar "Get All" Database:
 
-User "Get All" Database = https://frozen-woodland-47284.herokuapp.com/user/get/all
+https://frozen-woodland-47284.herokuapp.com/webinar/get/all
+
+### User "Get All" Database:
+
+https://frozen-woodland-47284.herokuapp.com/user/get/all
+
+### Example API Query with Axios:
 
 ```javascript
-// Example:
-
-  const getAllWebinars = () => {
-    axios
-      .get("https://frozen-woodland-47284.herokuapp.com/webinar/get/all")
-      .then((res) => {
-        const results = res.data.data;
-        setWebinars(results);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  }, []);
+const getAllWebinars = () => {
+  axios
+    .get("https://frozen-woodland-47284.herokuapp.com/webinar/get/all")
+    .then((res) => {
+      const results = res.data.data;
+      setWebinars(results);
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+};
 ```
 
-Webinar Public Database Endpoints:
+### Webinar Public Database Endpoints:
 
 ```
 post("/webinar/create")
@@ -129,7 +138,7 @@ get("/webinar/get/all")
 get("/webinar/get/createdby/:id")
 ```
 
-User Public Database Endpoints:
+### User Public Database Endpoints:
 
 ```
 post("/register")
