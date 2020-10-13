@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/Prodigy-Frontend/static/css/main.5ab12adf.chunk.css",
-    "main.js": "/Prodigy-Frontend/static/js/main.94c13dfe.chunk.js",
-    "main.js.map": "/Prodigy-Frontend/static/js/main.94c13dfe.chunk.js.map",
+    "main.css": "/Prodigy-Frontend/static/css/main.630507cf.chunk.css",
+    "main.js": "/Prodigy-Frontend/static/js/main.b4d50ce3.chunk.js",
+    "main.js.map": "/Prodigy-Frontend/static/js/main.b4d50ce3.chunk.js.map",
     "runtime-main.js": "/Prodigy-Frontend/static/js/runtime-main.b3e146cf.js",
     "runtime-main.js.map": "/Prodigy-Frontend/static/js/runtime-main.b3e146cf.js.map",
     "static/css/2.4fcd7487.chunk.css": "/Prodigy-Frontend/static/css/2.4fcd7487.chunk.css",
-    "static/js/2.9dfdda52.chunk.js": "/Prodigy-Frontend/static/js/2.9dfdda52.chunk.js",
-    "static/js/2.9dfdda52.chunk.js.map": "/Prodigy-Frontend/static/js/2.9dfdda52.chunk.js.map",
+    "static/js/2.1d4f2188.chunk.js": "/Prodigy-Frontend/static/js/2.1d4f2188.chunk.js",
+    "static/js/2.1d4f2188.chunk.js.map": "/Prodigy-Frontend/static/js/2.1d4f2188.chunk.js.map",
     "index.html": "/Prodigy-Frontend/index.html",
-    "precache-manifest.5e0debbd8da865d3ddf90297af1ff4d6.js": "/Prodigy-Frontend/precache-manifest.5e0debbd8da865d3ddf90297af1ff4d6.js",
+    "precache-manifest.67c855cb622ab6d01566a131aab27929.js": "/Prodigy-Frontend/precache-manifest.67c855cb622ab6d01566a131aab27929.js",
     "service-worker.js": "/Prodigy-Frontend/service-worker.js",
     "static/css/2.4fcd7487.chunk.css.map": "/Prodigy-Frontend/static/css/2.4fcd7487.chunk.css.map",
-    "static/css/main.5ab12adf.chunk.css.map": "/Prodigy-Frontend/static/css/main.5ab12adf.chunk.css.map",
-    "static/js/2.9dfdda52.chunk.js.LICENSE.txt": "/Prodigy-Frontend/static/js/2.9dfdda52.chunk.js.LICENSE.txt",
+    "static/css/main.630507cf.chunk.css.map": "/Prodigy-Frontend/static/css/main.630507cf.chunk.css.map",
+    "static/js/2.1d4f2188.chunk.js.LICENSE.txt": "/Prodigy-Frontend/static/js/2.1d4f2188.chunk.js.LICENSE.txt",
     "static/media/angular.jpg": "/Prodigy-Frontend/static/media/angular.3aadc18d.jpg",
     "static/media/all.css": "/Prodigy-Frontend/static/media/fa-solid-900.ee09ad75.woff",
     "static/media/javascript.png": "/Prodigy-Frontend/static/media/javascript.81dd5191.png",
@@ -26,8 +26,8 @@
   "entrypoints": [
     "static/js/runtime-main.b3e146cf.js",
     "static/css/2.4fcd7487.chunk.css",
-    "static/js/2.9dfdda52.chunk.js",
-    "static/css/main.5ab12adf.chunk.css",
-    "static/js/main.94c13dfe.chunk.js"
+    "static/js/2.1d4f2188.chunk.js",
+    "static/css/main.630507cf.chunk.css",
+    "static/js/main.b4d50ce3.chunk.js"
   ]
 }
