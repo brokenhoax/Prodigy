@@ -133,7 +133,7 @@ npm start
 
 <br>
 
-## Database:
+## Database
 
 <br>
 
@@ -149,7 +149,7 @@ https://frozen-woodland-47284.herokuapp.com/user/get/all
 
 <br>
 
-## API:
+## API
 
 <br>
 
