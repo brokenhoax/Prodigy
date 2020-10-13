@@ -42,6 +42,10 @@ Virtuoso is simply the stage. It's our community that makes for a symphony. [Hea
 
 <br>
 
+[Back To Top](#Virtuoso)
+
+<br>
+
 ## Technologies
 
 <br>
@@ -126,7 +130,7 @@ npm start
 
 <strong>Step 6</strong> - Don't forget to update all API calls with Local Host endpoints.
 
-For example, within "Login.jsx" you would replace this endpoint: https://frozen-woodland-47284.herokuapp.com/user/login with the local hosted substitute: http://localhost:3000//user/login
+For example, within "Login.jsx" you would replace this endpoint: https://frozen-woodland-47284.herokuapp.com/user/login with the locally hosted substitute: http://localhost:3000//user/login
 
 ###
 
