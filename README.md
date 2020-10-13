@@ -8,9 +8,11 @@
 
 ---
 
+<br>
 ## Table of Contents
 
 - [Description](#description)
+- [Technologies](#technologies)
 - [Get Started](#get-started)
 - [References](#references)
 - [License](#License)
@@ -26,9 +28,7 @@ We put our content creator (aka "Virtuoso") in the spotlight by making it easy f
 
 We enable our content consumer (aka "Prodigy") by making it easy for them to access and find the right content, without hassle. Out prodigies have the advantage being aided by our adaptive assessments, curated learning paths, courses authored by top industry experts, and on-demand usage statistics and reports.
 
-Virtuoso is simply the stage. It's our community that makes for a symphony.
-
-[Hear with your eyes.](https://brokenhoax.github.io/Prodigy-Frontend/#/register)
+Virtuoso is simply the stage. It's our community that makes for a symphony. [Hear with your eyes.](https://brokenhoax.github.io/Prodigy-Frontend/#/register)
 
 ## Technologies
 
@@ -42,6 +42,8 @@ Virtuoso is simply the stage. It's our community that makes for a symphony.
 <br>
 
 [Back To Top](#Virtuoso)
+
+<br>
 
 ## Get Started
 
@@ -92,6 +94,8 @@ Step 5 - Navigate to your [Your Local Server](http://localhost:3000/Prodigy-Fron
 
 [Back To Top](#Virtuoso)
 
+<br>
+
 ## Working With Our Databases:
 
 <br>
@@ -141,6 +145,8 @@ get("/user/:id/webinar/passed")
 
 [Back To Top](#Virtuoso)
 
+<br>
+
 ## References
 
 <br>
@@ -165,6 +171,8 @@ get("/user/:id/webinar/passed")
 
 [Back To Top](#Virtuoso)
 
+<br>
+
 ## License
 
 <br>
@@ -186,7 +194,10 @@ The above copyright notice and this permission notice shall be included in all c
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 <br>
+
 [Back To Top](#Virtuoso)
+
+<br>
 
 ## Author's Info
 
@@ -201,4 +212,4 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 [Back To Top](#Virtuoso)
 
----
+<br>
