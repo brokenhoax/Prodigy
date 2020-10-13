@@ -17,10 +17,11 @@
 - [Description](#description)
 - [Technologies](#technologies)
 - [Get Started](#get-started)
-- [Database & API](#database-&-api)
+- [Database](#database)
+- [API](#api)
 - [References](#references)
 - [License](#License)
-- [Author Info](#author-info)
+- [Author's Info](#author's-info)
 
 <br>
 
@@ -39,6 +40,8 @@ We put our content creator (aka "Virtuoso") in the spotlight by making it easy f
 We enable our content consumer (aka "Prodigy") by making it easy for them to access and find the right content, without hassle. Out prodigies have the advantage being aided by our adaptive assessments, curated learning paths, courses authored by top industry experts, and on-demand usage statistics and reports.
 
 Virtuoso is simply the stage. It's our community that makes for a symphony. [Hear with your eyes.](https://brokenhoax.github.io/Prodigy-Frontend/#/register)
+
+<br>
 
 ## Technologies
 
@@ -128,7 +131,7 @@ npm start
 
 <br>
 
-## Database & API:
+## Database:
 
 <br>
 
@@ -141,6 +144,10 @@ https://frozen-woodland-47284.herokuapp.com/webinar/get/all
 ### User "Get All" Database:
 
 https://frozen-woodland-47284.herokuapp.com/user/get/all
+
+<br>
+
+## API:
 
 <br>
 
@@ -255,5 +262,3 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 <br>
 
 [Back To Top](#Virtuoso)
-
-<br>
