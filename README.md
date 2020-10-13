@@ -8,8 +8,6 @@
 
 ---
 
-<br>
-
 ## Table of Contents
 
 - [Description](#description)
@@ -17,8 +15,6 @@
 - [References](#references)
 - [License](#License)
 - [Author Info](#author-info)
-
----
 
 ## Description
 
@@ -34,8 +30,6 @@ Virtuoso is simply the stage. It's our community that makes for a symphony.
 
 [Hear with your eyes.](https://brokenhoax.github.io/Prodigy-Frontend/#/register)
 
----
-
 ## Technologies
 
 <br>
@@ -48,10 +42,6 @@ Virtuoso is simply the stage. It's our community that makes for a symphony.
 <br>
 
 [Back To Top](#Virtuoso)
-
----
-
-<br>
 
 ## Get Started
 
@@ -102,8 +92,6 @@ Step 5 - Navigate to your [Your Local Server](http://localhost:3000/Prodigy-Fron
 
 [Back To Top](#Virtuoso)
 
----
-
 ## Working With Our Databases:
 
 <br>
@@ -153,8 +141,6 @@ get("/user/:id/webinar/passed")
 
 [Back To Top](#Virtuoso)
 
----
-
 ## References
 
 <br>
@@ -179,8 +165,6 @@ get("/user/:id/webinar/passed")
 
 [Back To Top](#Virtuoso)
 
----
-
 ## License
 
 <br>
@@ -203,8 +187,6 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 <br>
 [Back To Top](#Virtuoso)
-
----
 
 ## Author's Info
 
