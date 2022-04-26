@@ -1,3 +1,4 @@
+import React from "react";
 import { useWebinar } from "../../utils/WebinarContext";
 // import { useUser } from "../../utils/UserContext";
 // import UserContext from "../../utils/UserContext";
