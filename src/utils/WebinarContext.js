@@ -10,6 +10,7 @@ export function useWebinar() {
 export const WebinarProvider = ({ children }) => {
   const [webinars, setWebinars] = useState([
     {
+      _id: "ABCDEFGHIJKLMNO123456789",
       date: {
         event: {
           title: "This Webinar Da Bomb!",
