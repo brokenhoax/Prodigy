@@ -58,7 +58,7 @@ const Cards = (props) => {
   async function handleLike(newfav, user) {
     console.log("This is the new Favorite =>:" + newfav);
     try {
-      let LikeURL = `https://salty-fortress-9010-virt-b.herokuapp.com/user/update/${user}`;
+      let LikeURL = `http://localhost:3000/user/update/${user}`;
       const response = await axios.patch(LikeURL, {
         $push: { favorite: newfav },
       });

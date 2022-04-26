@@ -1,6 +1,6 @@
 # Virtuoso
 
-![Project Image](./public/assets/images/Virtuoso_Webinars.png)
+![Project Image](./public/assets/images/Virtuoso_Demo.gif)
 
 <br>
 
@@ -17,7 +17,6 @@
 - [Description](#description)
 - [Technologies](#technologies)
 - [Get Started](#get-started)
-- [Database](#database)
 - [API](#api)
 - [References](#references)
 - [License](#License)
@@ -40,6 +39,10 @@ We put our content creator (aka "Virtuoso") in the spotlight by making it easy f
 We enable our content consumer (aka "Prodigy") by making it easy for them to access and find the right content, without hassle. Out prodigies have the advantage being aided by our adaptive assessments, curated learning paths, courses authored by top industry experts, and on-demand usage statistics and reports.
 
 Virtuoso is simply the stage. It's our community that makes for a symphony. [Hear with your eyes.](https://brokenhoax.github.io/Prodigy-Frontend/#/register)
+
+<br>
+
+[Back To Top](#Virtuoso)
 
 <br>
 
@@ -85,7 +88,9 @@ https://brokenhoax.github.io/Prodigy-Frontend/#/
 
 <br>
 
-<strong>Step 1</strong> - Clone both front-end and back-end repos:
+<strong>Step 1</strong>
+
+Clone both front-end and back-end repos:
 
 - [Prodigy Frontend](https://github.com/brokenhoax/Prodigy-Frontend)
 
@@ -93,7 +98,9 @@ https://brokenhoax.github.io/Prodigy-Frontend/#/
 
 <br>
 
-<strong>Step 2</strong> - Install Virtuoso's dependencies by running the following command within the root directory of your <strong>front-end</strong> clone:
+<strong>Step 2</strong>
+
+Install Virtuoso's dependencies by running the following command within the root directory of your <strong>front-end</strong> clone:
 
 ```javascript
 npm install
@@ -101,7 +108,9 @@ npm install
 
 <br>
 
-<strong>Step 3</strong> - Install Virtuoso's dependencies by running the following command within the root directory of your <strong>back-end</strong> clone:
+<strong>Step 3</strong>
+
+Install Virtuoso's dependencies by running the following command within the root directory of your <strong>back-end</strong> clone:
 
 ```javascript
 npm install
@@ -109,7 +118,9 @@ npm install
 
 <br>
 
-<strong>Step 4</strong> - Run the following command within the root directory of your <strong>back-end</strong> clone:
+<strong>Step 4</strong>
+
+Run the following command within the root directory of your <strong>back-end</strong> clone:
 
 ```javascript
 npm start
@@ -117,7 +128,9 @@ npm start
 
 <br>
 
-<strong>Step 5</strong> - Next, once the backend server is running, run the following command within the root directory of your <strong>front-end</strong> clone:
+<strong>Step 5</strong>
+
+Next, once the backend server is running, run the following command within the root directory of your <strong>front-end</strong> clone:
 
 ```javascript
 npm start
@@ -125,7 +138,61 @@ npm start
 
 <br>
 
-<strong>Step 6</strong> - Navigate to your [Your Local Server](http://localhost:3000/Prodigy-Frontend#/) to test Virtuoso!
+<strong>Step 6</strong>
+
+Don't forget to update all API calls with Local Host endpoints.
+
+For example, within "Login.jsx" you would...
+
+... replace this endpoint → https://frozen-woodland-47284.herokuapp.com/user/login
+
+... with the locally hosted substitute → http://localhost:3000//user/login
+
+###
+
+```javascript
+// E.g., This...
+
+const submit = async (e) => {
+  e.preventDefault();
+  const loginUser = { email, password };
+  const loginRes = await Axios.post(
+    "https://frozen-woodland-47284.herokuapp.com/user/login",
+    loginUser
+  );
+  setUserData({
+    token: loginRes.data.token,
+    user: loginRes.data.user,
+    favorite: loginRes.data.user.favorite,
+  });
+  localStorage.setItem("auth-token", loginRes.data.token);
+  history.push("/");
+};
+
+// becomes...
+
+const submit = async (e) => {
+  e.preventDefault();
+  const loginUser = { email, password };
+  const loginRes = await Axios.post(
+    "http://localhost:3000/user/login",
+    loginUser
+  );
+  setUserData({
+    token: loginRes.data.token,
+    user: loginRes.data.user,
+    favorite: loginRes.data.user.favorite,
+  });
+  localStorage.setItem("auth-token", loginRes.data.token);
+  history.push("/");
+};
+```
+
+<br>
+
+<strong>Step 7</strong>
+
+Navigate to your [Your Local Server](http://localhost:3000/Prodigy-Frontend#/) to test Virtuoso!
 
 <br>
 
@@ -133,23 +200,19 @@ npm start
 
 <br>
 
-## Database
+## API
 
 <br>
 
-### Webinar "Get All" Database:
+### Webinar "Get All" from Database:
 
 https://frozen-woodland-47284.herokuapp.com/webinar/get/all
 
 <br>
 
-### User "Get All" Database:
+### User "Get All" from Database:
 
 https://frozen-woodland-47284.herokuapp.com/user/get/all
-
-<br>
-
-## API
 
 <br>
 
