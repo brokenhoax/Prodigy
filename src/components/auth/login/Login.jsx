@@ -10,7 +10,6 @@ import Axios from "axios";
 const LogIn = () => {
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
-  const [displayname, setDisplayname] = useState();
 
   const { userData, setUserData } = useContext(UserContext);
   const history = useHistory();

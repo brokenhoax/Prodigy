@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Cards from "../cards/Cards";
 import styles from "./Webinars.module.css";
-import searchStyle from "../search/Search.module.css";
 import Search from "../search/Search";
 import { BrowserRouter as Router } from "react-router-dom";
 import "../../App.css";
