@@ -17,12 +17,13 @@
 .searchBar {
   display: flex;
   position: relative;
-  justify-content: end;
+  justify-content: flex-end;
   height: 100%;
 }
 
 .searchBarInput {
-  font-size: 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
   padding: 0 0.5rem;
   border-style: none;
   border-radius: 20px;
