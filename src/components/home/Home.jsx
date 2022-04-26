@@ -10,7 +10,7 @@ class Home extends Component {
   render() {
     return (
       <div className={styles.test}>
-        <h1> Welcome to Virtuoso! </h1>
+        <h1> Welcome to Prodigy! </h1>
         <h2>It is {new Date().toLocaleTimeString()}.</h2>
       </div>
     );
