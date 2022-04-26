@@ -1,8 +1,6 @@
-// import React from "react";
-import React from "react";
 import { useWebinar } from "../../utils/WebinarContext";
 // import { useUser } from "../../utils/UserContext";
-import UserContext from "../../utils/UserContext";
+// import UserContext from "../../utils/UserContext";
 import styles from "./Cards.module.css";
 import CardItem from "../cardItem/CardItem";
 import javascript from "../../images/javascript.png";
