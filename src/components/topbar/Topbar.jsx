@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { useHistory } from "react-router-dom";
 import UserContext from "../../utils/UserContext";
+import { HashRouter as Router, Link } from "react-router-dom";
 import styles from "./Topbar.module.css";
 import "../../App.css";
 
@@ -26,14 +27,18 @@ const AuthOptions = () => {
             Log Out
           </button>
         ) : (
-          <>
-            <button className={styles.register} onClick={register}>
-              Register
-            </button>
-            <button className={styles.logIn} onClick={login}>
-              Log In
-            </button>
-          </>
+          <Router className={styles.topbar}>
+            <nav>
+              <Link to="/register" className={styles.register}>
+                {" "}
+                Register{" "}
+              </Link>
+              <Link to="/login" className={styles.logIn}>
+                {" "}
+                Login{" "}
+              </Link>
+            </nav>
+          </Router>
         )}
       </div>
     </div>

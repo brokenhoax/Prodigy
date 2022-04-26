@@ -5,6 +5,7 @@ import {
   Switch,
   Route,
   Redirect,
+  NavLink,
 } from "react-router-dom";
 import axios from "axios";
 import "bootstrap/dist/css/bootstrap.css";
@@ -21,7 +22,14 @@ import { WebinarProvider } from "../src/utils/WebinarContext";
 import UserContext from "../src/utils/UserContext";
 import CreateWebinar from "./components/createWebinar/CreateWebinar";
 import Register from "./components/auth/register/Register";
-import AuthOptions from "./components/auth/authOptions/authOptions";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faUser } from "@fortawesome/free-solid-svg-icons";
+import { faHeart } from "@fortawesome/free-solid-svg-icons";
+import { faCalendarAlt } from "@fortawesome/free-solid-svg-icons";
+import { faVideo } from "@fortawesome/free-solid-svg-icons";
+import { faChartPie } from "@fortawesome/free-solid-svg-icons";
+import { faTv } from "@fortawesome/free-solid-svg-icons";
+import styles from "./components/navbar/Navbar.module.css";
 
 export default function App() {
   const [userData, setUserData] = useState({
@@ -61,13 +69,106 @@ export default function App() {
   }, []);
 
   return (
-    <Router>
-      <div className="grid-container">
-        <UserContext.Provider value={{ userData, setUserData }}>
-          <WebinarProvider>
-            <Logo className="logo" />
-            <Topbar className="topbar" />
-            <Navbar className="navbar" />
+    <div className="grid-container">
+      <UserContext.Provider value={{ userData, setUserData }}>
+        <WebinarProvider>
+          <Logo className="logo" />
+          <Topbar className="topbar" />
+          <Router>
+            <div>
+              <nav className={styles.navi}>
+                <NavLink
+                  to="/login"
+                  className={styles.navLink}
+                  activeStyle={{
+                    color: "#ffbd69",
+                  }}
+                >
+                  <span>
+                    <FontAwesomeIcon
+                      className={styles.navIcon}
+                      icon={faUser}
+                      size="2x"
+                    />
+                  </span>
+                </NavLink>{" "}
+                <NavLink
+                  className={styles.navLink}
+                  activeStyle={{
+                    color: "#ffbd69",
+                  }}
+                  to="/webinars"
+                >
+                  <span>
+                    <FontAwesomeIcon
+                      className={styles.navIcon}
+                      icon={faTv}
+                      size="2x"
+                    />
+                  </span>
+                </NavLink>{" "}
+                <NavLink
+                  className={styles.navLink}
+                  activeStyle={{
+                    color: "#ffbd69",
+                  }}
+                  to="/schedule"
+                >
+                  <span>
+                    <FontAwesomeIcon
+                      className={styles.navIcon}
+                      icon={faCalendarAlt}
+                      size="2x"
+                    />
+                  </span>
+                </NavLink>{" "}
+                <NavLink
+                  className={styles.navLink}
+                  activeStyle={{
+                    color: "#ffbd69",
+                  }}
+                  to="/create"
+                >
+                  <span>
+                    <FontAwesomeIcon
+                      className={styles.navIcon}
+                      icon={faVideo}
+                      size="2x"
+                    />
+                  </span>
+                </NavLink>{" "}
+                <NavLink
+                  className={styles.navLink}
+                  activeStyle={{
+                    color: "#ffbd69",
+                  }}
+                  to="/favorites"
+                >
+                  <span>
+                    <FontAwesomeIcon
+                      className={styles.navIcon}
+                      icon={faHeart}
+                      size="2x"
+                    />
+                  </span>
+                </NavLink>{" "}
+                <NavLink
+                  className={styles.navLink}
+                  activeStyle={{
+                    color: "#ffbd69",
+                  }}
+                  to="/stats"
+                >
+                  <span>
+                    <FontAwesomeIcon
+                      className={styles.navIcon}
+                      icon={faChartPie}
+                      size="2x"
+                    />
+                  </span>
+                </NavLink>{" "}
+              </nav>
+            </div>
             <Switch>
               <Route
                 path="/"
@@ -125,10 +226,10 @@ export default function App() {
               />
               <Route path="/404" component={PageNotFound} />
               <Redirect from="*" to="/404" />
-            </Switch>
-          </WebinarProvider>
-        </UserContext.Provider>
-      </div>
-    </Router>
+            </Switch>{" "}
+          </Router>
+        </WebinarProvider>
+      </UserContext.Provider>
+    </div>
   );
 }

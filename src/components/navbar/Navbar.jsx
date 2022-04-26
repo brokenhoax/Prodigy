@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { BrowserRouter as Navlink, Link } from "react-router-dom";
+import { BrowserRouter as NavLink, Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
@@ -14,7 +14,12 @@ class Navbar extends Component {
     return (
       <section className={styles.navi}>
         <div className={styles.navWrapper}>
-          <Link className={styles.navLink} to="/login">
+          <NavLink
+            to="/login"
+            className={(isActive) =>
+              "nav-link" + (!isActive ? " unselected" : "")
+            }
+          >
             <span>
               <FontAwesomeIcon
                 className={styles.navIcon}
@@ -22,8 +27,8 @@ class Navbar extends Component {
                 size="2x"
               />
             </span>
-          </Link>{" "}
-          <Link className={styles.navLink} to="/webinars">
+          </NavLink>{" "}
+          <NavLink className={styles.navLink} to="/webinars">
             <span>
               <FontAwesomeIcon
                 className={styles.navIcon}
@@ -31,8 +36,8 @@ class Navbar extends Component {
                 size="2x"
               />
             </span>
-          </Link>{" "}
-          <Link className={styles.navLink} to="/schedule">
+          </NavLink>{" "}
+          <NavLink className={styles.navLink} to="/schedule">
             <span>
               <FontAwesomeIcon
                 className={styles.navIcon}
@@ -40,8 +45,8 @@ class Navbar extends Component {
                 size="2x"
               />
             </span>
-          </Link>{" "}
-          <Link className={styles.navLink} to="/create">
+          </NavLink>{" "}
+          <NavLink className={styles.navLink} to="/create">
             <span>
               <FontAwesomeIcon
                 className={styles.navIcon}
@@ -49,8 +54,8 @@ class Navbar extends Component {
                 size="2x"
               />
             </span>
-          </Link>{" "}
-          <Link className={styles.navLink} to="/favorites">
+          </NavLink>{" "}
+          <NavLink className={styles.navLink} to="/favorites">
             <span>
               <FontAwesomeIcon
                 className={styles.navIcon}
@@ -58,8 +63,8 @@ class Navbar extends Component {
                 size="2x"
               />
             </span>
-          </Link>{" "}
-          <Link className={styles.navLink} to="/stats">
+          </NavLink>{" "}
+          <NavLink className={styles.navLink} to="/stats">
             <span>
               <FontAwesomeIcon
                 className={styles.navIcon}
@@ -67,7 +72,7 @@ class Navbar extends Component {
                 size="2x"
               />
             </span>
-          </Link>{" "}
+          </NavLink>{" "}
         </div>
       </section>
     );

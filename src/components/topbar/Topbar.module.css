@@ -12,33 +12,76 @@ a {
 
 .authOptions {
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   height: 100%;
 }
 
 .logOut {
-  padding: 10px;
+  display: inline-flex;
+  margin: auto;
 }
 
 .logIn {
-  padding: 10px;
+  display: inline-flex;
+  justify-items: center;
+  align-items: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin: auto;
+  height: 100%;
 }
 
 .register {
-  padding: 10px;
+  display: inline-flex;
+  justify-items: center;
+  align-items: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin: auto;
+  height: 100%;
 }
 
 .logOut:hover {
-  padding-top: 1rem;
+  display: inline-flex;
+  justify-items: center;
+  align-items: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin: auto;
+  height: 100%;
   background-color: #411e8f;
+}
+
+.logOut:focus {
+  color: #411e8f;
 }
 
 .logIn:hover {
-  padding-top: 1rem;
-  background-color: #411e8f;
+  display: inline-flex;
+  justify-items: center;
+  align-items: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin: auto;
+  height: 100%;
+  color: #411e8f;
+}
+
+.logIn:focus {
+  color: #411e8f;
 }
 
 .register:hover {
-  padding-top: 1rem;
-  background-color: #411e8f;
+  display: inline-flex;
+  justify-items: center;
+  align-items: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin: auto;
+  height: 100%;
+  color: #411e8f;
+}
+
+.register:focus {
+  color: #411e8f;
 }
