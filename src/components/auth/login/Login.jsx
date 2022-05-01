@@ -18,13 +18,12 @@ const LogIn = () => {
     e.preventDefault();
     const loginUser = { email, password };
     const loginRes = await Axios.post(
-      "http://localhost:3000/user/login",
+      "http://localhost:5000/user/login",
       loginUser
     );
     setUserData({
       token: loginRes.data.token,
       user: loginRes.data.user,
-      favorite: loginRes.data.user.favorite,
     });
     localStorage.setItem("auth-token", loginRes.data.token);
     history.push("/");

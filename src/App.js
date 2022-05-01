@@ -11,7 +11,7 @@ import axios from "axios";
 import "bootstrap/dist/css/bootstrap.css";
 import Logo from "./components/logo/Logo";
 import Topbar from "./components/topbar/Topbar";
-import Navbar from "./components/navbar/Navbar";
+// import Navbar from "./components/navbar/Navbar";
 import Stats from "./components/stats/Stats";
 import Schedule from "./components/schedule/Schedule";
 import Favorites from "./components/favorites/Favorites";
@@ -32,10 +32,23 @@ import { faTv } from "@fortawesome/free-solid-svg-icons";
 import styles from "./components/navbar/Navbar.module.css";
 
 export default function App() {
+  // OLD
   const [userData, setUserData] = useState({
     token: undefined,
-    user: undefined,
-    favorite: undefined,
+    user: {
+      favorite: [],
+      registered: [],
+      completedVideo: [],
+      passedQuiz: [],
+      _id: 0,
+      firstname: "John",
+      lastname: "Doe",
+      email: "",
+      displayname: "John Doe",
+      password: "",
+      role: "Virtuoso",
+      userCreated: "",
+    },
   });
 
   useEffect(() => {
@@ -44,24 +57,22 @@ export default function App() {
       if (token === null) {
         localStorage.setItem("auth-token", "");
         token = "";
+        console.log(userData);
       }
       const tokenResponse = await axios.post(
-        "https://frozen-woodland-47284.herokuapp.com/user/isTokenValid",
+        "http://localhost:5000/user/isTokenValid",
         null,
         { headers: { "x-auth-token": token } }
       );
       if (tokenResponse.data) {
-        const userRes = await axios.get(
-          "https://frozen-woodland-47284.herokuapp.com/users/",
-          {
-            headers: { "x-auth-token": token },
-          }
-        );
+        const userRes = await axios.get("http://localhost:5000/users/", {
+          headers: { "x-auth-token": token },
+        });
+        // console.log(userRes);
         setUserData({
           token,
           user: userRes.data,
         });
-        console.log(userRes.data);
       }
     };
 

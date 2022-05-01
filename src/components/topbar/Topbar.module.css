@@ -8,6 +8,7 @@ a {
   position: sticky;
   top: 0;
   z-index: 2;
+  padding: auto;
 }
 
 .authOptions {
@@ -16,12 +17,7 @@ a {
   height: 100%;
 }
 
-.logOut {
-  display: inline-flex;
-  margin: auto;
-}
-
-.logIn {
+.option {
   display: inline-flex;
   justify-items: center;
   align-items: center;
@@ -31,17 +27,7 @@ a {
   height: 100%;
 }
 
-.register {
-  display: inline-flex;
-  justify-items: center;
-  align-items: center;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  margin: auto;
-  height: 100%;
-}
-
-.logOut:hover {
+.option:hover {
   display: inline-flex;
   justify-items: center;
   align-items: center;
@@ -52,36 +38,6 @@ a {
   background-color: #411e8f;
 }
 
-.logOut:focus {
-  color: #411e8f;
-}
-
-.logIn:hover {
-  display: inline-flex;
-  justify-items: center;
-  align-items: center;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  margin: auto;
-  height: 100%;
-  color: #411e8f;
-}
-
-.logIn:focus {
-  color: #411e8f;
-}
-
-.register:hover {
-  display: inline-flex;
-  justify-items: center;
-  align-items: center;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  margin: auto;
-  height: 100%;
-  color: #411e8f;
-}
-
-.register:focus {
+.option:focus {
   color: #411e8f;
 }
