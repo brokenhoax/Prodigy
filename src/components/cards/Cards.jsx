@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useContext, useEffect } from "react";
 import { useWebinar } from "../../utils/WebinarContext";
 // import { useUser } from "../../utils/UserContext";
-// import UserContext from "../../utils/UserContext";
+import UserContext from "../../utils/UserContext";
 import styles from "./Cards.module.css";
 import CardItem from "../cardItem/CardItem";
 import javascript from "../../images/javascript.png";
@@ -19,8 +19,8 @@ const Cards = (props) => {
   const webinars = webinarContext;
 
   // Using User Context
-  // const userContext = useUser();
-  // const user = userContext;
+  const user = useContext(UserContext);
+  // console.log("User: " + JSON.stringify(user));
 
   // Logic to Change Image
   function getImage(photo) {
@@ -52,21 +52,41 @@ const Cards = (props) => {
   function getTime(time) {
     var res = time.substring(time.length - 8, time.length);
     var showTime = res.substring(0, 5);
-    console.log("Is this the time?" + showTime);
+    // console.log("Is this the time? " + showTime);
     return showTime;
   }
 
-  async function handleLike(newfav, user) {
-    console.log("This is the new Favorite =>:" + newfav);
+  async function handleLike(newfav) {
+    console.log("Favorited: " + newfav);
+    console.log("User: " + JSON.stringify(user.userData.user));
     try {
-      let LikeURL = `http://localhost:3000/user/update/${user}`;
+      // Save Favorite to MongoDB
+      let LikeURL = `http://localhost:5000/user/update/${user.userData.user._id}`;
       const response = await axios.patch(LikeURL, {
-        $push: { favorite: newfav },
+        id: user.userData.user._id,
+        favorite: newfav,
       });
       console.log("👉 Returned data:", response);
     } catch (e) {
       console.log(`😱 Axios request failed: ${e}`);
     }
+    // Update User Details
+    const getUserDetails = async () => {
+      let token = localStorage.getItem("auth-token");
+      const userRes = await axios.get(
+        `http://localhost:5000/user/get/id/${user.userData.user._id}`,
+        {
+          headers: { "x-auth-token": token },
+        }
+      );
+      console.log(userRes.data.data);
+      user.setUserData({
+        token,
+        user: userRes.data.data,
+      });
+    };
+    console.log(user);
+    getUserDetails();
   }
 
   return (
@@ -80,9 +100,9 @@ const Cards = (props) => {
               .map((webinar) => (
                 <CardItem
                   key={webinar._id}
+                  id={webinar._id}
                   favorite={webinar.favorite}
                   search={props.search}
-                  userID={webinar.userID}
                   handleLike={handleLike}
                   src={getImage(webinar.mainTopic)}
                   title={webinar.title}

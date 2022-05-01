@@ -1,9 +1,43 @@
-import React from "react";
+import React, { useContext } from "react";
 import styles from "../cards/Cards.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
+import UserContext from "../../utils/UserContext";
 
 function CardItem(props) {
+  // console.log(props);
+  // Using User Context
+  const user = useContext(UserContext);
+  console.log("User: " + JSON.stringify(user.userData.user));
+
+  let button;
+
+  if (user.userData.user._id === null) {
+    button = null;
+  } else if (user.userData.user.favorite.includes(props.id)) {
+    button = (
+      <button
+        className={styles.favIcon}
+        onClick={() => props.handleLike(props.id)}
+      >
+        <FontAwesomeIcon className={styles.favIcon} icon={faHeart} size="lg" />
+      </button>
+    );
+  } else {
+    button = (
+      <button
+        className={styles.favIcon}
+        onClick={() => props.handleLike(props.id)}
+      >
+        <FontAwesomeIcon
+          className={styles.unfavIcon}
+          icon={faHeart}
+          size="lg"
+        />
+      </button>
+    );
+  }
+
   return (
     <>
       <li className={styles.cards__list__items}>
@@ -33,16 +67,7 @@ function CardItem(props) {
             >
               Watch Now!
             </a>
-            <button
-              className={styles.favIcon}
-              onClick={() => props.handleLike(props.favorite, props.userID)}
-            >
-              <FontAwesomeIcon
-                className={styles.navIcon}
-                icon={faHeart}
-                size="lg"
-              />
-            </button>
+            {button}
           </div>
         </div>
       </li>
