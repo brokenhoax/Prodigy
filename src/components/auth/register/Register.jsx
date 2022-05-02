@@ -2,7 +2,6 @@ import React, { useState, useContext } from "react";
 import styles from "./Register.module.css";
 import UserContext from "../../../utils/UserContext";
 import { useHistory } from "react-router-dom";
-import "../../../App.css";
 import axios from "axios";
 
 const Register = () => {

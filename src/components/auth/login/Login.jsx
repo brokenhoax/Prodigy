@@ -1,7 +1,6 @@
 import styles from "./Login.module.css";
 // import selyts from "./SignedOut.module.css";
 // import userPic from "../../../images/user.png";
-import "../../../App.css";
 import React, { useState, useContext } from "react";
 import UserContext from "../../../utils/UserContext";
 import { useHistory } from "react-router-dom";

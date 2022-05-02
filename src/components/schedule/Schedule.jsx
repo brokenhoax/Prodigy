@@ -4,7 +4,6 @@ import "bootstrap/dist/css/bootstrap.css";
 import "@fortawesome/fontawesome-free/css/all.css";
 import Sidebar from "../sidebar/Sidebar";
 import axios from "axios";
-import "../../App.css";
 
 import { BrowserRouter as Router } from "react-router-dom";
 

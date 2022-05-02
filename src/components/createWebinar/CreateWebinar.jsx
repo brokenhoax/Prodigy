@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import styles from "./CreateWebinar.module.css";
-import "../../App.css";
 import axios from "axios";
 
 // Forms Video on YouTube:

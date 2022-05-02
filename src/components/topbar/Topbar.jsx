@@ -3,7 +3,6 @@ import React, { useContext } from "react";
 import UserContext from "../../utils/UserContext";
 import { HashRouter as Router, Link } from "react-router-dom";
 import styles from "./Topbar.module.css";
-import "../../App.css";
 
 const AuthOptions = () => {
   const { userData, setUserData } = useContext(UserContext);

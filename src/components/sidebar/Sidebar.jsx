@@ -5,7 +5,6 @@ import Genre from "../charts/genre/Genre";
 import Skill from "../charts/skill/Skill";
 import Presenter from "../charts/presenter/Presenter";
 import styles from "./Sidebar.module.css";
-import "../../App.css";
 import axios from "axios";
 
 class Sidebar extends Component {

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import "./App.css";
+import "./styles/app.css";
+import "./styles/tailwind.css";
 import {
   HashRouter as Router,
   Switch,
