@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext } from "react";
 import { useWebinar } from "../../utils/WebinarContext";
 // import { useUser } from "../../utils/UserContext";
 import UserContext from "../../utils/UserContext";

@@ -57,7 +57,7 @@ export default function App() {
       if (token === null) {
         localStorage.setItem("auth-token", "");
         token = "";
-        console.log(userData);
+        // console.log(userData);
       }
       const tokenResponse = await axios.post(
         "http://localhost:5000/user/isTokenValid",
@@ -99,7 +99,7 @@ export default function App() {
                     <FontAwesomeIcon
                       className={styles.navIcon}
                       icon={faUser}
-                      size="2x"
+                      size="md"
                     />
                   </span>
                 </NavLink>{" "}
@@ -114,7 +114,7 @@ export default function App() {
                     <FontAwesomeIcon
                       className={styles.navIcon}
                       icon={faTv}
-                      size="2x"
+                      size="md"
                     />
                   </span>
                 </NavLink>{" "}
@@ -129,7 +129,7 @@ export default function App() {
                     <FontAwesomeIcon
                       className={styles.navIcon}
                       icon={faCalendarAlt}
-                      size="2x"
+                      size="md"
                     />
                   </span>
                 </NavLink>{" "}
@@ -144,7 +144,7 @@ export default function App() {
                     <FontAwesomeIcon
                       className={styles.navIcon}
                       icon={faVideo}
-                      size="2x"
+                      size="md"
                     />
                   </span>
                 </NavLink>{" "}
@@ -159,7 +159,7 @@ export default function App() {
                     <FontAwesomeIcon
                       className={styles.navIcon}
                       icon={faHeart}
-                      size="2x"
+                      size="md"
                     />
                   </span>
                 </NavLink>{" "}
@@ -174,7 +174,7 @@ export default function App() {
                     <FontAwesomeIcon
                       className={styles.navIcon}
                       icon={faChartPie}
-                      size="2x"
+                      size="md"
                     />
                   </span>
                 </NavLink>{" "}

@@ -2,7 +2,7 @@
   display: grid;
   grid-area: navi;
   position: fixed;
-  width: 5rem;
+  width: 64px;
   height: 100vh;
   background: linear-gradient(to bottom, #005082 10%, #411e8f 50%);
   padding-top: 3rem;
