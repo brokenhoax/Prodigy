@@ -15,7 +15,7 @@ function Favorites() {
     <Router>
       <div className="main">
         <Search onChange={handleChange} value={searchTerm} />
-        <Cards search={searchTerm} header={"Favorites"} />
+        <Cards search={searchTerm} header={"Favorites"} favorites={true} />
       </div>
     </Router>
   );

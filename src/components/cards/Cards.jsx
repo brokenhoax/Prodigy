@@ -14,13 +14,14 @@ import react from "../../images/react.jpg";
 import axios from "axios";
 
 const Cards = (props) => {
+  let cards;
+
   // Using Webinar Context
   const webinarContext = useWebinar();
   const webinars = webinarContext;
 
   // Using User Context
   const user = useContext(UserContext);
-  // console.log("User: " + JSON.stringify(user));
 
   // Logic to Change Image
   function getImage(photo) {
@@ -89,37 +90,77 @@ const Cards = (props) => {
     getUserDetails();
   }
 
-  return (
-    <div className={styles.cards}>
-      <h1 className={styles.cards__title}>{props.header}</h1>
-      <div className={styles.cards__container}>
-        <div className={styles.cards__wrapper}>
-          <ul className={styles.cards__list}>
-            {webinars
-              .filter((webinar) => webinar.mainTopic.includes(props.search))
-              .map((webinar) => (
-                <CardItem
-                  key={webinar._id}
-                  id={webinar._id}
-                  favorite={webinar.favorite}
-                  search={props.search}
-                  handleLike={handleLike}
-                  src={getImage(webinar.mainTopic)}
-                  title={webinar.title}
-                  skill={" Skill: " + webinar.skillLevel}
-                  time={" Time: " + getTime(webinar.date.event.start)}
-                  duration={" Length: " + webinar.date.duration + " minutes"}
-                  topic={" Topic: " + webinar.mainTopic}
-                  link={webinar.video.url}
-                  label="JavaScript"
-                  path="/webinars"
-                />
-              ))}
-          </ul>
+  if (props.favorites) {
+    cards = (
+      <div className={styles.cards}>
+        <h1 className={styles.cards__title}>{props.header}</h1>
+        <div className={styles.cards__container}>
+          <div className={styles.cards__wrapper}>
+            <ul className={styles.cards__list}>
+              {webinars
+                .filter(
+                  (webinar) =>
+                    webinar.mainTopic.includes(props.search) &&
+                    user.userData.user.favorite.includes(webinar._id)
+                )
+                .map((webinar) => (
+                  <CardItem
+                    key={webinar._id}
+                    id={webinar._id}
+                    favorite={webinar.favorite}
+                    search={props.search}
+                    handleLike={handleLike}
+                    src={getImage(webinar.mainTopic)}
+                    title={webinar.title}
+                    skill={" Skill: " + webinar.skillLevel}
+                    time={" Time: " + getTime(webinar.date.event.start)}
+                    duration={" Length: " + webinar.date.duration + " minutes"}
+                    topic={" Topic: " + webinar.mainTopic}
+                    link={webinar.video.url}
+                    label="JavaScript"
+                    path="/webinars"
+                  />
+                ))}
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
-  );
+    );
+  } else {
+    cards = (
+      <div className={styles.cards}>
+        <h1 className={styles.cards__title}>{props.header}</h1>
+        <div className={styles.cards__container}>
+          <div className={styles.cards__wrapper}>
+            <ul className={styles.cards__list}>
+              {webinars
+                .filter((webinar) => webinar.mainTopic.includes(props.search))
+                .map((webinar) => (
+                  <CardItem
+                    key={webinar._id}
+                    id={webinar._id}
+                    favorite={webinar.favorite}
+                    search={props.search}
+                    handleLike={handleLike}
+                    src={getImage(webinar.mainTopic)}
+                    title={webinar.title}
+                    skill={" Skill: " + webinar.skillLevel}
+                    time={" Time: " + getTime(webinar.date.event.start)}
+                    duration={" Length: " + webinar.date.duration + " minutes"}
+                    topic={" Topic: " + webinar.mainTopic}
+                    link={webinar.video.url}
+                    label="JavaScript"
+                    path="/webinars"
+                  />
+                ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  return <div>{cards}</div>;
 };
 
 export default Cards;
